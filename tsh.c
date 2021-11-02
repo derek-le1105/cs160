@@ -399,7 +399,6 @@ void sigchld_handler(int sig)
 	}
 	//this job is terminated by an uncaught signal?
 	if(WIFSIGNALED(status)){
-	    //struct job_t *j = getjobpid(jobs, child_pid);
 	    printf("Job [%d] (%d) is terminated by a signal %d.\n", pid2jid(child_pid), child_pid, sig);
 	    deletejob(jobs, child_pid);
 	    //you get job DS according to its pid
