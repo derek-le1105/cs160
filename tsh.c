@@ -408,7 +408,6 @@ void sigchld_handler(int sig)
 	//this job is terminated normally
 	if(WIFEXITED(status)){
 	    //source code: deletejob(jobs, child_pid);
-	    //printf("its up to you, you might want to give an output here.\n");   dont have to worry about syntax
 	    deletejob(jobs, child_pid);
 	    //printf("WIFEXITED");
 	}
